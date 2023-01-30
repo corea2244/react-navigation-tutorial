@@ -1,0 +1,27 @@
+1. Functional Component
+- hook 탄생 이전에는 state 를 가질 수가 없었기 때문에 주로 dubm component 로만 활용
+- hook 의 등장으로 주목받기 시작
+
+2. Hook 을 왜 만들었는가?
+    1. 컴포넌트간 상태 관련 로직 재사용하기 어려움
+        - 매번 같은 상태 관리 로직을 Copy & Paste
+        - 공통화 되지 않다보니 컴포넌트 마다 변경사항을 수정해야 하는 어려움
+    2. 컴포넌트가 커질수록 복잡해지는 로직
+        - componentDidmount 에서 너무 많은 일을 하게 됨
+    3. 혼란을 주는 class
+        - class this 키워드에서 오는 좋지 못한 경험
+
+3. Hook 사용의 규칙
+    1. 모든 hook 을 사용할 때 최상단에서 호출 하여야만 함
+    2. React 함수에서만 hook 을 사용해야 함
+
+4. React native 에서 자주 사용하는 훅
+    - useWindowDimensions > 앱의 경우 화면 사이즈가 디바이스별로 다르기 때문에 디바이스의 사이즈를 가져오기 위한 훅
+    - useBackHandler > 안드로이드에서 하드웨어 back 키를 누를 때 호출되는 훅
+    - useAppState > 현재 앱이 어떤 상태인지 알 수 있는 훅 (active, background, inactive 등등)
+    - useNavigation, useRoute > 네비게이션 바에서 사용하는 훅
+    - uselsFocused, useFocusEffect > bottom tab navigator 에서 많이 사용, 탭이 포커스 되어 있는지 확인할 수 있는 훅
+    - useScrollToTop > 스크롤 뷰를 최상단으로 올릴 때 사용
+    - useMount > component 가 mount 된 시점에 callback 호출
+    - usePrevious > state 의 이전 값을 알아내고자 할 때 사용
+    
