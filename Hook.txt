@@ -24,4 +24,15 @@
     - useScrollToTop > 스크롤 뷰를 최상단으로 올릴 때 사용
     - useMount > component 가 mount 된 시점에 callback 호출
     - usePrevious > state 의 이전 값을 알아내고자 할 때 사용
-    
+
+5. Memoization 이란
+- hook 을 사용하면 컴포넌트를 재사용 할 때 마다 컴포넌트를 새롭게 구성하게 됨 > 이는 비효율적일 수 있음
+- Memoization 이란 수행했던 연산 결과들을 어딘가 저장한 뒤 동일한 입력값인 경우 재활용 할 수 있음 > 이는 연산의 수를 줄이고 효율적인 프로그램을 만드는 데 도움을 줌
+- Memoization 을 도와주는 hook
+    - useMemo
+        첫번째 인자: 기억할 값을 리턴해주는 함수
+        두번쨰 인자: dependency array
+    - useCallback
+        첫번째 인자: 기억할 함수를 리턴해주는 함수
+        두번쨰 인자: dependency array
+        
